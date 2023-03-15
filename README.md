@@ -10,7 +10,7 @@ Obrigado por visitar meu perfil! :0
 
 
 <div style="display: inline_block"> <br>
-<img height="****" width="***" src="****">
+<img  width="100%" src="**********">
   </div>
 
 
@@ -25,7 +25,7 @@ Obrigado por visitar meu perfil! :0
 </div>
 <br>
 
- &nbsp;&nbsp;&nbsp;&nbsp; ![GitHub top language](https://img.shields.io/github/languages/top/AdonisJeronimo/************************?style=plastic)
+ &nbsp;&nbsp;&nbsp;&nbsp; ![GitHub top language](https://img.shields.io/github/languages/top/AdonisJeronimo/auxiliar-de-estudos?style=plastic)
 
  # Futuras implementações
 

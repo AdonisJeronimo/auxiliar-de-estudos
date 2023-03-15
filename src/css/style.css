@@ -1,0 +1,294 @@
+html{
+    /* font-size: 62.5%; */
+    max-width:1440px ;
+    font-family: 'Comfortaa', cursive;
+}
+
+/* header */
+
+.header{
+    display: flex;
+    position: relative;
+    height: 60px;
+    width: 100%;
+    background-color: #0103B7;
+    box-shadow: 0px 5px 10px #000;
+}
+.header .header-container{
+    display: flex;
+    padding: 10px;
+}
+.header .header-container nav{
+    display: flex;
+}
+
+.header ul{
+    display: flex;
+
+}
+
+.header ul li a{
+    padding: 0px 10px;
+    color: #fff;
+}
+
+/* STUDY */
+
+.study{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: #010138;
+    padding: 0 30px;
+}
+
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fdfdfd;
+    color: #939DA3;
+    border: 2px solid #939DA3;
+    padding: .3rem .6rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+/* button:hover{
+    background-color: #102F5e ;
+} */
+
+button i {
+    color: red;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+button:hover > i{
+    color: red;
+}
+
+input,
+select{
+    padding: 0.25rem 0.5rem;
+}
+
+.hide{
+    display: none;
+}
+
+/* TODO HEADER */
+
+.todo-container{
+    min-width: 400px;
+    width: 75%;
+    margin: 3rem auto;
+     background-color: #fdfdfd;
+     padding: 1.5rem;
+     border-radius: 15px;
+     /* filter: drop-shadow(10px 0px 5px #102F5e); */
+}
+
+.todo-container h1{
+    font-family: 'Tilt Warp', cursive;
+    /* font-weight: bold; */
+    font-size: 2rem;
+}
+
+.todo-container header{
+    text-align: center;
+    padding: 0 1rem 1rem;
+    border-bottom: 1px solid #CCC;
+}
+
+/* TODO FORM */
+
+#todo-form,
+#edit-form{
+    padding: 1rem;
+    border-bottom:  1px solid #CCC;
+}
+#todo-form p,
+#edit-form p{
+    margin-bottom:.5rem ;
+    font-weight: bold;
+}
+
+.form-control{
+    display: flex;
+}
+
+.form-control input{
+    margin-right: 0.3rem;
+    flex: 1;
+}
+
+#cancel-edit-btn{
+    margin-top: 1rem;
+    color:#444;
+}
+
+/* TODO TOOLBAR */
+
+#toolbar{
+    padding: 1rem;
+    border-bottom:  1px solid #ccc;
+    display: flex;
+}
+
+#toolbar h4{
+    margin-bottom: .5rem;
+}
+
+#search{
+    border-right: 1px solid #ddd;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+#search form{
+    display: flex;
+}
+
+#search input{
+    width: 100%;
+    margin-right: 0.3rem;
+}
+
+#filter{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+#filter select{
+    flex: 1;
+}
+
+/*TODO LIST*/
+
+.todo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+.todo h3{
+    flex: 1;
+    font-size: 0.9rem;
+}
+
+.todo button{
+    margin-left: 0.4rem;
+}
+
+.completed{
+    background-color: #A6A698;
+    opacity: 0.7;
+}
+.completed:hover{
+    background-color: #A6A698;
+    /* transform: scale(0.99); */
+    opacity: 1;
+}
+
+.completed h3{
+    color: #fff;
+    text-decoration: line-through;
+    font-style: italic;
+}
+.pending{
+    background-color: #0840CF;
+}
+
+.pending:hover{
+    background-color: #086EC4;
+    transform: scale(103%);
+    color: #fff;
+}
+.completed:hover > .finish-todo:hover,
+.pending:hover > .finish-todo:hover{
+    background-color: #4BB814;
+    color: #256C02;
+    border: 2px solid #256C02;
+    transition: 0.5s ease;
+    transform: rotate(360deg);
+    border-radius: 10px;
+}
+.completed:hover > .edit-todo:hover,
+.pending:hover > .edit-todo:hover{
+    background-color: orange;
+    color: #B84514;
+    border-color: #B84514;
+    transition: 0.5s ease;
+    transform: rotate(-360deg);
+    border-radius: 10px;
+}
+.completed:hover > .remove-todo:hover,
+.pending:hover > .remove-todo:hover{
+    background-color: #FF0013;
+    color: #85000D;
+    border-color: #85000D;
+    transition: 0.5s ease;
+    transform: rotate(360deg);
+    border-radius: 10px;
+}
+
+/* POMODORO */
+
+.pomodoro-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* max-width: 450px; */
+    width: 35%;
+    /* margin: 3rem auto;  Aqui limita a largura do todo e faz centralizar na tela, provavelmente quando eu for fazer o pomodoro terei que mexer aqui */
+    margin: 3rem 1rem ;
+     background-color: #111210;
+     padding: 1.5rem;
+     border-radius: 15px;
+}
+
+.pomodoro-container h2{
+    padding: 0 1rem 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.timer{
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    border-radius: 100%;
+    padding: 0 1rem 1rem;
+    margin-bottom: .5rem;
+
+}
+.control{
+    display: flex;
+    width: 100%;
+    height: 70px;
+    border-radius: 10px;
+    justify-content: space-around;
+    margin-bottom: .5rem;
+    padding: 0 1rem 1rem;
+}
+
+.comando{
+    width: 75px;
+    height: 100%;
+    border-radius: 10px;
+    background-color: yellow;
+}
+
+.information{
+    background-color: #fff;
+    width: 100%;
+    height: 200px;
+}

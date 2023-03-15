@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>TODO</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="src/css/reset.css" />
@@ -19,31 +19,41 @@
       referrerpolicy="no-referrer"
     />
     <!-- STYLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
   </head>
 
   <body>
     <header class="header">
-        <div class="header-container">
-            <nav>
-                <input type="checkbox" id="menu-hamburguer">
-                <label for="menu-hamburguer">
-                    <div class="menu">
-                        <span class="hamburguer"></span>
-                    </div>
-                </label>
+      <div class="header-container">
+        <nav>
+          <input type="checkbox" id="menu-hamburguer" />
+          <label for="menu-hamburguer">
+            <div class="menu">
+              <span class="hamburguer"></span>
+            </div>
+          </label>
 
-                <ul>
-                  <li><a href="about">Sobre</a></li>
-                  <li><a href="contribute">Contribuição</a></li>
-                </ul>
-              </nav>
-        </div>
+          <ul>
+            <li><a href="about">Sobre</a></li>
+            <li><a href="contribute">Contribuição</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
       <section class="study">
         <div class="todo-container">
           <header>
-            <h1>TODO Avançado</h1>
+            <h1>Lista de Tarefas</h1>
           </header>
           <form id="todo-form">
             <p>Adicionar tarefa</p>
@@ -59,10 +69,10 @@
             </div>
           </form>
 
-          <form id="edit-form">
+          <form id="edit-form" class="hide">
             <p>Edite sua tarefa:</p>
             <div class="form-control">
-              <input type="text" id="edit-input"/>
+              <input type="text" id="edit-input" />
               <button type="submit">
                 <i class="fas fa-edit"></i>
               </button>
@@ -70,53 +80,62 @@
             <button id="cancel-edit-btn"></button>
           </form>
 
-          <div class="toolbar">
+          <div id="toolbar">
             <div id="search">
-                <h4>Pesquisar:</h4>
-                <form>
-                    <input type="text" id="search-input" placeholder="Buscar">
-                    <button id="erase-button">
-                        <i class="fas fa-backspace"></i>
-                    </button>
-                </form>
+              <h4>Pesquisar:</h4>
+              <form>
+                <input type="text" id="search-input" placeholder="Buscar" />
+                <button id="erase-button">
+                  <i class="fas fa-backspace"></i>
+                </button>
+              </form>
             </div>
             <div id="filter">
-                <h4>Filtrar:</h4>
-                <select  id="filter-select">
-                    <option value="all">Todos</option>
-                    <option value="completed">Concluidos</option>
-                    <option value="pending">Pendente</option>
-                </select>
+              <h4>Filtrar:</h4>
+              <select id="filter-select">
+                <option value="all">Todos</option>
+                <option value="completed">Concluidos</option>
+                <option value="pending">Pendente</option>
+              </select>
             </div>
           </div>
           <div id="todo-list">
-            <div class="todo">
-                <h3>Fazendo algo...</h3>
-                <button class="finish-todo">
-                    <i class="fas fa-check"></i>
-                </button>
-                <button class="edit-todo">
-                    <i class="fas fa-edit"></i>
-                </button>
-                <button class="remove-todo">
-                    <i class="fas fa-trash-alt"></i>
-                </button>
+            <div class="todo completed">
+              <h3>Fazendo algo...</h3>
+              <button class="finish-todo">
+                <i class="fas fa-check"></i>
+              </button>
+              <button class="edit-todo">
+                <i class="fas fa-edit"></i>
+              </button>
+              <button class="remove-todo">
+                <i class="fas fa-trash-alt"></i>
+              </button>
             </div>
-            <div class="todo">
-                <h3>Fazendo outra coisa...</h3>
-                <button class="finish-todo">
-                    <i class="fas fa-check"></i>
-                </button>
-                <button class="edit-todo">
-                    <i class="fas fa-edit"></i>
-                </button>
-                <button class="remove-todo">
-                    <i class="fas fa-trash-alt"></i>
-                </button>
+            <div class="todo pending">
+              <h3>Fazendo outra coisa...</h3>
+              <button class="finish-todo">
+                <i class="fas fa-check"></i>
+              </button>
+              <button class="edit-todo">
+                <i class="fas fa-edit"></i>
+              </button>
+              <button class="remove-todo">
+                <i class="fas fa-trash-alt"></i>
+              </button>
             </div>
           </div>
+        </div>
 
-
+        <div class="pomodoro-container">
+          <h2>POMODORO</h2>
+          <div class="timer"></div>
+          <div class="control">
+            <div class="comando pomodoro"></div>
+            <div class="comando short-break"></div>
+            <div class="comando long-break"></div>
+          </div>
+          <div class="information"></div>
         </div>
       </section>
       <section class="about"></section>
