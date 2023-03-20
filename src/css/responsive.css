@@ -1,0 +1,32 @@
+@media (max-width: 400px) {
+ .study{
+    padding: 0px 10px;
+ }
+ .todo-container{
+    min-width: 250px;
+
+ }
+
+  #toolbar {
+    flex-direction: column;
+  }
+  #search {
+    display: flex;
+    width: 100%;
+    margin-bottom:.5rem ;
+    margin: 0;
+    padding: 0;
+    border-right: none;
+    flex: 1;
+  }
+  form{
+    margin-bottom:.5rem ;
+
+  }
+
+  #filter{
+    width: 100%;
+    flex: 1;
+
+  }
+}

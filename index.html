@@ -4,13 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TODO</title>
+    <meta name="description" content="
+    SmallTasks é um TODO-List desenvolvido para te ajudar a atingir pequenos objetivos diários. A soma de 'pequenas' conquistas nos traz grandes resultados
+    .">
+    <meta name="author" content="Adonis Jeronimo">
+    <title>TODO | JAVASCRIPT</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="src/css/reset.css" />
     <link rel="stylesheet" href="src/css/style.css" />
-    <link rel="stylesheet" href="src/css/reponsive.css" />
-    <!-- FONT AWESOME -->
+
+    <link rel="stylesheet" href="src/css/responsive.css" />
+    <!-- FONT AWESOME - TODO -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -18,43 +23,32 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- STYLE FONT -->
+    <!-- FONT - TODO -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
   </head>
 
   <body>
-    <header class="header">
-      <div class="header-container">
-        <nav>
-          <input type="checkbox" id="menu-hamburguer" />
-          <label for="menu-hamburguer">
-            <div class="menu">
-              <span class="hamburguer"></span>
-            </div>
-          </label>
 
-          <ul>
-            <li><a href="about">Sobre</a></li>
-            <li><a href="contribute">Contribuição</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
     <main>
+
       <section class="study">
         <div class="todo-container">
           <header>
-            <h1>Lista de Tarefas</h1>
+            <h1>TODO | JAVASCRIPT</h1>
           </header>
+
           <form id="todo-form">
             <p>Adicionar tarefa</p>
             <div class="form-control">
@@ -63,7 +57,7 @@
                 id="todo-input"
                 placeholder="O que você vai fazer?"
               />
-              <button type="submit">
+              <button type="submit" class="submit">
                 <i class="fas fa-plus-circle"></i>
               </button>
             </div>
@@ -73,11 +67,11 @@
             <p>Edite sua tarefa:</p>
             <div class="form-control">
               <input type="text" id="edit-input" />
-              <button type="submit">
+              <button type="submit" class="submit">
                 <i class="fas fa-edit"></i>
               </button>
             </div>
-            <button id="cancel-edit-btn"></button>
+            <button id="cancel-edit-btn">Cancelar</button>
           </form>
 
           <div id="toolbar">
@@ -90,18 +84,19 @@
                 </button>
               </form>
             </div>
+
             <div id="filter">
               <h4>Filtrar:</h4>
               <select id="filter-select">
                 <option value="all">Todos</option>
-                <option value="completed">Concluidos</option>
-                <option value="pending">Pendente</option>
+                <option value="done">Concluidos</option>
+                <option value="todo">Pendente</option>
               </select>
             </div>
           </div>
           <div id="todo-list">
-            <div class="todo completed">
-              <h3>Fazendo algo...</h3>
+            <!-- <div class="todo done">
+              <h3></h3>
               <button class="finish-todo">
                 <i class="fas fa-check"></i>
               </button>
@@ -111,43 +106,12 @@
               <button class="remove-todo">
                 <i class="fas fa-trash-alt"></i>
               </button>
-            </div>
-            <div class="todo pending">
-              <h3>Fazendo outra coisa...</h3>
-              <button class="finish-todo">
-                <i class="fas fa-check"></i>
-              </button>
-              <button class="edit-todo">
-                <i class="fas fa-edit"></i>
-              </button>
-              <button class="remove-todo">
-                <i class="fas fa-trash-alt"></i>
-              </button>
-            </div>
+            </div> -->
           </div>
-        </div>
-
-        <div class="pomodoro-container">
-          <h2>POMODORO</h2>
-          <div class="timer"></div>
-          <div class="control">
-            <div class="comando pomodoro"></div>
-            <div class="comando short-break"></div>
-            <div class="comando long-break"></div>
-          </div>
-          <div class="information"></div>
         </div>
       </section>
-      <section class="about"></section>
-      <section class="contribute"></section>
     </main>
-    <!-- <footer>
-        <ul>
-            <li><a href="#study"></a></li>
-            <li><a href="#about"></a></li>
-            <li><a href="#contribute"></a></li>
-        </ul>
-    </footer> -->
+
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"

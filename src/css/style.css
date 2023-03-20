@@ -1,44 +1,47 @@
 html{
     /* font-size: 62.5%; */
     max-width:1440px ;
+    min-width: 320px;
     font-family: 'Comfortaa', cursive;
+
+}
+
+body{
+    background-color: #B1D0FF;
+
 }
 
 /* header */
 
-.header{
-    display: flex;
-    position: relative;
-    height: 60px;
-    width: 100%;
-    background-color: #0103B7;
-    box-shadow: 0px 5px 10px #000;
-}
-.header .header-container{
-    display: flex;
-    padding: 10px;
-}
-.header .header-container nav{
-    display: flex;
+.header {
+    background-color: #fff;
 }
 
-.header ul{
+.header .header-container {
     display: flex;
-
+    padding: 20px 40px;
+    justify-content: center;
+    align-items: center;
+    min-height: 75px;
+    min-width: 320px;
 }
 
-.header ul li a{
-    padding: 0px 10px;
-    color: #fff;
+.header h1 {
+display: none;
+}
+
+.header .header-container ul li a{
+    font-weight: bold;
 }
 
 /* STUDY */
 
 .study{
     display: flex;
+    flex-direction: row;
     width: 100%;
-    height: 100vh;
-    background-color: #010138;
+    height: auto; /*AJUSTAR DEPOIS*/
+    /* background: url(../images/bg.jpg) center center; */
     padding: 0 30px;
 }
 
@@ -55,18 +58,9 @@ button{
     transition: 0.4s;
 }
 
-/* button:hover{
-    background-color: #102F5e ;
-} */
-
 button i {
-    color: red;
     font-weight: bold;
     pointer-events: none;
-}
-
-button:hover > i{
-    color: red;
 }
 
 input,
@@ -81,17 +75,20 @@ select{
 /* TODO HEADER */
 
 .todo-container{
-    min-width: 400px;
-    width: 75%;
-    margin: 3rem auto;
+    min-width: 320px;
+    max-width: 800px;
+    width: 800px;
+    height: auto;
+    margin: 3rem auto 0;
      background-color: #fdfdfd;
      padding: 1.5rem;
      border-radius: 15px;
-     /* filter: drop-shadow(10px 0px 5px #102F5e); */
+     filter: drop-shadow(0px 0px 5px #000);
+
 }
 
 .todo-container h1{
-    font-family: 'Tilt Warp', cursive;
+    /* font-family: 'Tilt Warp', cursive; */
     /* font-weight: bold; */
     font-size: 2rem;
 }
@@ -115,6 +112,7 @@ select{
     font-weight: bold;
 }
 
+
 .form-control{
     display: flex;
 }
@@ -124,13 +122,23 @@ select{
     flex: 1;
 }
 
+.submit:hover{
+    transition: 0.5s;
+    color: #0840CF;
+    border-color: #0840CF ;
+}
+
 #cancel-edit-btn{
     margin-top: 1rem;
     color:#444;
 }
+#cancel-edit-btn:hover{
+    transition: 0.5s;
+    border-color: #000;
+    color: #000;
+}
 
 /* TODO TOOLBAR */
-
 #toolbar{
     padding: 1rem;
     border-bottom:  1px solid #ccc;
@@ -159,6 +167,15 @@ select{
     margin-right: 0.3rem;
 }
 
+#erase-button{
+    transition: 0.5s;
+}
+
+#erase-button:hover{
+    color: #000;
+    border-color: #000;
+}
+
 #filter{
     width: 35%;
     display: flex;
@@ -170,7 +187,6 @@ select{
 }
 
 /*TODO LIST*/
-
 .todo{
     display: flex;
     justify-content: space-around;
@@ -178,6 +194,12 @@ select{
     padding: 1rem;
     border-bottom: 1px solid #ddd;
     transition: 0.3s;
+    color: #fff;
+    background-color: #0840CF;
+}
+.todo:hover{
+    transform: scale(103%);
+    color: #000;
 }
 
 .todo h3{
@@ -187,34 +209,35 @@ select{
 
 .todo button{
     margin-left: 0.4rem;
+    /* background-color: red; */
+
+}
+.todo button i{
+    color: red;
 }
 
-.completed{
+.done{
     background-color: #A6A698;
     opacity: 0.7;
 }
-.completed:hover{
+
+.done:hover{
     background-color: #A6A698;
-    /* transform: scale(0.99); */
     opacity: 1;
+    transform: none;
 }
 
-.completed h3{
-    color: #fff;
+.done h3{
+    color: #000;
     text-decoration: line-through;
     font-style: italic;
 }
-.pending{
-    background-color: #0840CF;
-}
 
-.pending:hover{
-    background-color: #086EC4;
-    transform: scale(103%);
-    color: #fff;
-}
-.completed:hover > .finish-todo:hover,
-.pending:hover > .finish-todo:hover{
+/*ICON LIST*/
+
+
+ .done:hover > .finish-todo:hover,
+.todo:hover > .finish-todo:hover{
     background-color: #4BB814;
     color: #256C02;
     border: 2px solid #256C02;
@@ -222,8 +245,9 @@ select{
     transform: rotate(360deg);
     border-radius: 10px;
 }
-.completed:hover > .edit-todo:hover,
-.pending:hover > .edit-todo:hover{
+
+.done:hover > .edit-todo:hover,
+.todo:hover > .edit-todo:hover{
     background-color: orange;
     color: #B84514;
     border-color: #B84514;
@@ -231,8 +255,8 @@ select{
     transform: rotate(-360deg);
     border-radius: 10px;
 }
-.completed:hover > .remove-todo:hover,
-.pending:hover > .remove-todo:hover{
+.done:hover > .remove-todo:hover,
+.todo:hover > .remove-todo:hover{
     background-color: #FF0013;
     color: #85000D;
     border-color: #85000D;
@@ -241,54 +265,18 @@ select{
     border-radius: 10px;
 }
 
-/* POMODORO */
+/* ABOUT */
 
-.pomodoro-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* max-width: 450px; */
-    width: 35%;
-    /* margin: 3rem auto;  Aqui limita a largura do todo e faz centralizar na tela, provavelmente quando eu for fazer o pomodoro terei que mexer aqui */
-    margin: 3rem 1rem ;
-     background-color: #111210;
-     padding: 1.5rem;
-     border-radius: 15px;
-}
+/* ABOUT-TODO-LIS */
 
-.pomodoro-container h2{
-    padding: 0 1rem 1rem;
-    border-bottom: 1px solid #ddd;
-}
-
-.timer{
-    width: 150px;
-    height: 150px;
-    background-color: red;
-    border-radius: 100%;
-    padding: 0 1rem 1rem;
-    margin-bottom: .5rem;
-
-}
-.control{
-    display: flex;
+.todo-list{
     width: 100%;
-    height: 70px;
-    border-radius: 10px;
-    justify-content: space-around;
-    margin-bottom: .5rem;
-    padding: 0 1rem 1rem;
+    height: 100vh;
+    /* background-color: red; */
 }
 
-.comando{
-    width: 75px;
-    height: 100%;
-    border-radius: 10px;
-    background-color: yellow;
-}
-
-.information{
-    background-color: #fff;
-    width: 100%;
-    height: 200px;
+.teste{
+    height: 500px;
+    width: 500px;
+    /* background-color: blue; */
 }
