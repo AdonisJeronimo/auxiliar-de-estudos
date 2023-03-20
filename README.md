@@ -33,7 +33,10 @@ Também será permitido a busca por itens específicos ou até mesmo realizar a 
 <img  width="100%" src="src/images/gif-projeto.gif">
   </div>
 
-
+<div style="font-size: 18px; text-align: center">
+  <a href="https://todojs-afj.netlify.app/"><b>Clique Aqui</b></a>
+</div>
+<br>
 
 ### Habilidades utilizadas 💻👨🏻‍💻🖥
 
